@@ -441,6 +441,7 @@ interval_name</code></pre>
 </div>
 <div id="devise-a-strategy-for-filling-in-all-of-the-missing-values-in-the-dataset.-the-strategy-does-not-need-to-be-sophisticated.-for-example-you-could-use-the-meanmedian-for-that-day-or-the-mean-for-that-5-minute-interval-etc." class="section level4">
 <h4>2.Devise a strategy for filling in all of the missing values in the dataset. The strategy does not need to be sophisticated. For example, you could use the mean/median for that day, or the mean for that 5-minute interval, etc.</h4>
+<p>The strategy is to use the mean of the 5-minute interval for the day</p>
 <pre class="r"><code>activity_na &lt;- activity[is.na(activity$steps),]
 activity_clean2 &lt;- activity[!is.na(activity$steps),]
 activity_clean2$day &lt;- weekdays(as.Date(activity_clean2$date))
