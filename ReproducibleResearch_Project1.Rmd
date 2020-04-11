@@ -2,7 +2,9 @@
 title: "Reproducible Research Project1"
 author: "Gilda M Castro"
 date: "4/11/2020"
-output: html_document
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -146,3 +148,4 @@ plot (as.numeric(names(intervals_workdays)), intervals_workdays, xlab = "Interva
 ```
 
 There is a difference in the activity of the persons. The trends are different. People is more active during the weekends.
+
